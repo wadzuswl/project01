@@ -1,0 +1,268 @@
+/* 메인 페이지 섹션 간격 */
+.gap {
+  padding: 80px 0;
+}
+
+/* 이너 */
+.inner {
+  width: 1300px;
+  margin: 0 auto;
+}
+
+/* 각 섹션 타이틀 */
+.title {
+  font-size: var(--h2);
+  position: relative;
+  padding-left: 17px;
+}
+
+/* 각 섹션 타이틀 블릿바 */
+.title::before {
+  content: '';
+  position: absolute;
+  width: 5px;
+  height: 100%;
+  background-color: var(--green-main);
+  border-radius: 5px;
+  left: 0;
+  top: 0;
+}
+
+/* 각 섹션 타이틀 아래 간격 */
+.title-bottom {
+  margin-bottom: 36px;
+}
+
+/* 각 섹션 타이틀 옆 버튼 */
+.title-btn {
+  width: 90px;
+  height: 35px;
+  background: var(--yellow-accent);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  border-radius: 5px;
+  box-shadow: var(--shadow-btn-offset) var(--shadow-btn-blur) var(--shadow-color-pc);
+  transition: .3s;
+}
+
+.title-btn p {
+  color: var(--white-light);
+  font-size: var(--btn2);
+  font-weight: var(--btn2-weight);
+}
+
+.title-btn span {
+  background: url(../image/icon_btn_arrow.png) no-repeat center / cover;
+  width: 20px;
+  height: 20px;
+  transition: .3s;
+}
+
+/* 각 섹션 타이틀 옆 버튼 호버 */
+.title-btn:hover {
+  background: var(--green-main);
+}
+
+.title-btn:hover span {
+  transform: translateX(2px);
+}
+
+/* 탭메뉴 */
+.tap-menu {
+  background: var(--white-light);
+  width: 600px;
+  height: 80px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  border-radius: 50px;
+  margin-bottom: 36px;
+  box-shadow: var(--shadow-box-offset) var(--shadow-box-blur) var(--shadow-color-pc);
+}
+
+.tap-btn {
+  background: var(--green-light);
+  width: 180px;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  border-radius: 50px;
+  border: 2px solid var(--gray-light);
+  font-size: var(--tap2);
+  color: var(--black-light);
+  transition: .3s;
+  cursor: pointer;
+}
+
+/* 탭메뉴 호버 */
+.tap-btn:hover {
+  background: var(--green-gradient-tap) !important;
+  font-weight: 600;
+  color: var(--white-light);
+  border: none;
+}
+
+/* 탭메뉴 활성화 */
+.tap-btn.active {
+  background: var(--green-gradient-tap) !important;
+  font-weight: 600;
+  color: var(--white-light);
+  border: none;
+}
+
+/* 서브 페이지 섹션 간격 */
+.gap-margin80 {
+  margin-bottom: 80px;
+}
+
+.gap-margin60 {
+  margin-bottom: 60px;
+}
+
+.gap-margin36 {
+  margin-bottom: 36px;
+}
+
+/* 서브 페이지 상단 배너 */
+.sub-top-banner {
+  width: 100%;
+  height: 300px;
+  position: relative;
+  margin-top: 80px;
+}
+
+.sub-top-banner::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(33, 33, 33, 0.9), rgba(57, 57, 57, 0.1));
+  left: 0;
+  top: 0;
+}
+
+.sub-top-banner-text-wrap {
+  color: var(--white-light);
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.sub-page-main-title {
+  font-size: var(--text-xl);
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.sub-page-main-title-desc {
+  font-size: var(--text-xxxl);
+  font-weight: 500;
+}
+
+/* 고투탑버튼 */
+.gototop-btn {
+  width: 50px;
+  height: 50px;
+  background: var(--gray-basic);
+  position: fixed;
+  right: 0;
+  bottom: 40px;
+  opacity: 0;
+  visibility: hidden;
+  transition: .5s;
+  z-index: 99;
+}
+
+.gototop-btn.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.gototop-btn-img {
+  width: 40px;
+  height: 40px;
+  background: url(../image/icon_gototop.png) no-repeat center / cover;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes blink {
+
+  0%,
+  100% {
+    opacity: 0.7;
+  }
+
+  50% {
+    opacity: 0.1;
+  }
+}
+
+@media (max-width: 768px) {
+  .inner {
+    width: 90%;
+  }
+
+  .title {
+    font-size: var(--m-h5);
+  }
+
+  .title-btn {
+    width: 100px;
+    height: 40px;
+    box-shadow: var(--m-shadow-btn-offset) var(--m-shadow-btn-blur) var(--shadow-color-mobile);
+  }
+
+  /* 반응형 줄바꿈 */
+  .line-break {
+    display: block;
+  }
+
+  .tap-menu {
+    width: 350px;
+    height: 60px;
+    box-shadow: var(--m-shadow-box-offset) var(--m-shadow-box-blur) var(--shadow-color-mobile);
+  }
+
+  .tap-btn {
+    width: 100px;
+    height: 45px;
+    line-height: 45px;
+    font-size: var(--m-text-md);
+  }
+
+  .gap-margin80 {
+    margin-bottom: 60px;
+  }
+
+  .sub-top-banner {
+    height: 200px;
+    margin-top: 60px;
+  }
+
+  .sub-page-main-title {
+    font-size: var(--m-text-md);
+    margin-bottom: 12px;
+  }
+
+  .sub-page-main-title-desc {
+    font-size: var(--m-text-xl);
+  }
+
+  .gototop-btn {
+    width: 40px;
+    height: 40px;
+  }
+
+  .gototop-btn-img {
+    width: 32px;
+    height: 32px;
+  }
+}

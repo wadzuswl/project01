@@ -1,0 +1,595 @@
+.header {
+  background: rgba(255, 255, 255, 0.5);
+  width: 100%;
+  height: 80px;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  transition: .3s;
+}
+
+.header-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
+
+.logo {
+  width: 196px;
+}
+
+.logo a {
+  display: block;
+  width: 133px;
+  height: 60px;
+}
+
+.logo a img {
+  width: 100%;
+  height: 100%;
+}
+
+.nav {
+  height: inherit;
+}
+
+.gnb {
+  display: flex;
+  align-items: center;
+  gap: 120px;
+  height: inherit;
+}
+
+.gnb li {
+  height: inherit;
+  line-height: 80px;
+  position: relative;
+}
+
+.gnb li:nth-child(1)::after,
+.gnb li:nth-child(2)::after,
+.gnb li:nth-child(4)::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: var(--yellow-accent);
+  opacity: 0.7;
+  left: 78%;
+  top: 46%;
+  animation-name: blink;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+.gnb-item.active a {
+  color: var(--green-main);
+  font-weight: 700;
+}
+
+.gnb li a {
+  font-size: var(--nav);
+  font-weight: var(--nav-weight);
+  color: var(--black-dark);
+  transition: .3s;
+}
+
+.gnb li a:hover {
+  color: var(--green-main);
+  font-weight: 700;
+}
+
+.header-icons {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.search-btn {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: none;
+  background: var(--green-main);
+  transition: .3s;
+  box-shadow: var(--shadow-btn-offset) var(--shadow-btn-blur) var(--shadow-color-pc);
+}
+
+.search-btn-img {
+  margin: auto;
+  width: 40px;
+  height: 40px;
+  background: url(../image/icon_search_delete.png) no-repeat left / cover;
+}
+
+.search-btn:hover {
+  background: var(--green-dark);
+}
+
+.donation-btn {
+  width: 120px;
+  height: 50px;
+  background: var(--yellow-accent);
+  border-radius: 50px;
+  line-height: 50px;
+  text-align: center;
+  font-size: var(--btn1);
+  font-weight: var(--btn1-weight);
+  color: var(--white-light);
+  transition: .3s;
+  box-shadow: var(--shadow-btn-offset) var(--shadow-btn-blur) var(--shadow-color-pc);
+}
+
+.donation-btn:hover {
+  background: var(--green-main);
+}
+
+.trigger {
+  width: 40px;
+  height: 40px;
+  background: var(--green-dark);
+  border-radius: 50%;
+  display: none;
+  /* display: flex; */
+  flex-direction: column;
+  gap: 4px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transition: .3s;
+  box-shadow: var(--m-shadow-btn-offset) var(--m-shadow-btn-blur) var(--shadow-color-mobile);
+}
+
+.trigger.active {
+  background: var(--green-light);
+}
+
+.trigger span {
+  display: block;
+  width: 20px;
+  height: 3px;
+  background: var(--green-light);
+  border-radius: 10px;
+  position: absolute;
+  transition: .3s;
+}
+
+.trigger span:nth-child(1) {
+  top: 30%;
+}
+
+.trigger span:nth-child(3) {
+  bottom: 30%;
+}
+
+.trigger.active span:nth-child(1) {
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+  background: var(--green-dark);
+}
+
+.trigger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.trigger.active span:nth-child(3) {
+  bottom: 50%;
+  transform: translateY(50%) rotate(-45deg);
+  background: var(--green-dark);
+}
+
+.mega-nav {
+  display: none;
+  border-radius: 0 0 15px 15px;
+  overflow: hidden;
+  width: 795px;
+  height: 256px;
+  margin: 0 auto;
+}
+
+.mega-nav.active {
+  display: flex;
+}
+
+.lnb {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  padding-top: 20px;
+  background: var(--white-light);
+}
+
+.lnb.active {
+  background-color: var(--green-main);
+}
+
+.mega-nav #nav1 li {
+  position: relative;
+}
+
+.mega-nav #nav4 li {
+  position: relative;
+}
+
+.mega-nav #nav1 li:nth-child(1)::after,
+.mega-nav #nav4 li:nth-child(1)::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--yellow-accent);
+  opacity: 0.7;
+  left: 94%;
+  top: 39%;
+  animation-name: blink;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+.lnb li a {
+  font-size: var(--text-md);
+  color: var(--black-basic);
+  transition: .3s;
+}
+
+.lnb.active a {
+  color: var(--white-light);
+}
+
+.lnb li a:hover {
+  font-weight: 600;
+}
+
+.search-box {
+  display: none;
+  width: 1028px;
+  height: 100px;
+  margin: 0 auto;
+  background: var(--white-light);
+  border-radius: 0 0 15px 15px;
+  transition: 0.3s;
+}
+
+.search-box.active {
+  display: block;
+}
+
+.search-box.active .search-btn-img {
+  background: url(../image/icon_search_delete.png) no-repeat right / cover;
+}
+
+.search-box form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  height: inherit;
+}
+
+.search-box form input {
+  width: 600px;
+  height: 50px;
+  border-radius: 15px;
+  border: 1px solid var(--gray-basic);
+  padding-left: 20px;
+  background: var(--green-light);
+}
+
+.search-box form input::placeholder {
+  font-size: var(--text-md);
+  color: var(--green-dark);
+}
+
+.search-box form input:focus {
+  outline: 1px solid var(--green-main);
+  box-shadow: 0 0 5px var(--green-main);
+}
+
+.search-box form .search-box-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--green-main);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: var(--shadow-btn-offset) var(--shadow-btn-blur) var(--shadow-color-pc);
+
+}
+
+.search-box form .search-box-btn .search-box-btn-img {
+  width: 33.33px;
+  height: 33.33px;
+  background: url(../image/icon_search.png) no-repeat center / cover;
+}
+
+.accordion {
+  display: none;
+  background: var(--white-light);
+}
+
+.accordion-donaton-banner {
+  border-bottom: 1px solid var(--gray-light);
+  width: 100%;
+  padding: 20px 0;
+  margin-bottom: 12px;
+}
+
+.accordion-donaton-banner p {
+  font-size: var(--m-text-lg);
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.accordion-donaton-banner p span {
+  font-weight: 700;
+  color: var(--green-main);
+}
+
+.accordion-donaton-banner a {
+  width: 100%;
+  height: 40px;
+  background: var(--yellow-accent);
+  display: block;
+  font-size: var(--m-text-sm);
+  font-weight: 700;
+  color: var(--white-light);
+  text-align: center;
+  line-height: 40px;
+  transition: .3s;
+}
+
+.accordion-donaton-banner a:hover {
+  background: var(--green-dark);
+}
+
+.accordion-item.active {
+  background: var(--green-bg);
+  padding: 20px 10px;
+  border-radius: 5px;
+  margin-bottom: 12px;
+}
+
+.accordion-title-warp {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.accordion-title {
+  font-size: var(--m-text-lg);
+  font-weight: 500;
+  transition: .3s;
+}
+
+.accordion-title-btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--green-main);
+  position: relative;
+  transition: .3s;
+}
+
+.accordion-title-warp:hover .accordion-title {
+  font-weight: 600;
+  color: var(--black-dark);
+}
+
+.accordion-title-warp:hover .accordion-title-btn {
+  background-color: var(--green-dark);
+}
+
+.accordion-item.active .accordion-title {
+  font-weight: 600;
+  color: var(--black-dark);
+}
+
+.accordion-item.active .accordion-title-btn {
+  background-color: var(--green-dark);
+}
+
+.accordion-title-btn span:nth-child(1) {
+  width: 2px;
+  height: 20px;
+  background: var(--green-light);
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.accordion-title-btn span:nth-child(2) {
+  width: 20px;
+  height: 2px;
+  background: var(--green-light);
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.accordion-title-btn.active span:nth-child(1) {
+  opacity: 0;
+}
+
+.accordion-content {
+  display: none;
+}
+
+.accordion-content ul {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.accordion-content ul .accordion-li {
+  width: 95%;
+  height: 50px;
+  line-height: 50px;
+  background: var(--white-light);
+  border-radius: 10px;
+  margin: auto;
+}
+
+.accordion-content ul .accordion-li.active {
+  background: var(--green-main);
+}
+
+.accordion-content ul .accordion-li:hover {
+  background-color: var(--green-main);
+}
+
+.accordion-content ul .accordion-li .acc-a {
+  font-size: var(--m-text-md);
+  margin-left: 20px;
+  position: relative;
+  display: inline-block;
+  height: 100%;
+}
+
+.accordion-content ul .accordion-li:hover .acc-a {
+  color: var(--white-light);
+  font-weight: 500;
+}
+
+.accordion-content ul .accordion-li:hover .acc-a::after {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: url(../image/icon_nav_point.png) no-repeat center / cover;
+  left: 110%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.accordion .accordion-item .accordion-title,
+.accordion .accordion-item .accordion-li {
+  position: relative;
+}
+
+.accordion .accordion-item:nth-child(2) .accordion-title::after,
+.accordion .accordion-item:nth-child(3) .accordion-title::after,
+.accordion .accordion-item:nth-child(5) .accordion-title::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: var(--yellow-accent);
+  opacity: 0.7;
+  left: 78%;
+  top: 40%;
+  animation-name: blink;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+.accordion .accordion-item:nth-child(2) .accordion-li:nth-child(1):after,
+.accordion .accordion-item:nth-child(3) .accordion-li:nth-child(1)::after,
+.accordion .accordion-item:nth-child(5) .accordion-li:nth-child(1)::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--yellow-accent);
+  opacity: 0.7;
+  left: 2%;
+  top: 40%;
+  animation-name: blink;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+@media (max-width: 768px) {
+  .header {
+    height: 60px;
+    background: var(--white-light) !important;
+  }
+
+  .header-wrap {
+    padding: 10px 0;
+    height: 60px;
+  }
+
+  .logo a {
+    width: 89px;
+    height: 40px;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .search-btn {
+    width: 40px;
+    height: 40px;
+    box-shadow: var(--m-shadow-btn-offset) var(--m-shadow-btn-blur) var(--shadow-color-mobile);
+  }
+
+  .search-btn-img {
+    width: 25px;
+    height: 25px;
+  }
+
+  .donation-btn {
+    width: 80px;
+    height: 40px;
+    font-size: var(--m-text-sm);
+    line-height: 40px;
+    box-shadow: var(--m-shadow-btn-offset) var(--m-shadow-btn-blur) var(--shadow-color-mobile);
+  }
+
+  .trigger {
+    display: flex;
+  }
+
+  .accordion {
+    display: none;
+    height: 100vh;
+  }
+
+  .search-box {
+    width: 100%;
+  }
+
+  .search-box form {
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  .search-box form .search-box-btn {
+    width: 40px;
+    height: 40px;
+    box-shadow: var(--m-shadow-btn-offset) var(--m-shadow-btn-blur) var(--shadow-color-mobile);
+  }
+
+  .search-box form .search-box-btn .search-box-btn-img {
+    width: 25px;
+    height: 25px;
+  }
+
+  .search-box form {
+    gap: 12px;
+  }
+
+  .search-box form input {
+    width: 80%;
+    height: 40px;
+  }
+}

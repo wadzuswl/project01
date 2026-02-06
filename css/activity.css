@@ -1,0 +1,221 @@
+.activity {
+  background: url(../image/activity_bg.jpg) no-repeat center / cover;
+  position: relative;
+}
+
+.activity::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(33, 33, 33, 0.5), rgba(57, 57, 57, 0.5));
+  left: 0;
+  top: 0;
+}
+
+.activity .inner {
+  position: relative;
+  z-index: 10;
+}
+
+.activity .title {
+  color: var(--white-light);
+}
+
+.activity .title::before {
+  background: var(--white-light);
+}
+
+.activity-whole-wrap {
+  display: flex;
+  justify-content: space-between;
+  gap: 80px;
+}
+
+.activity-now {
+  display: flex;
+  justify-content: space-between;
+  gap: 4px;
+  height: 200px;
+}
+
+.activity-bar {
+  width: 10px;
+  height: 200px;
+  background: var(--green-light);
+}
+
+.activity-bar-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.activity-bar-text-list {
+  color: var(--gray-basic);
+  font-size: var(--text-sm);
+  white-space: nowrap;
+  position: relative;
+}
+
+.activity-bar-text-list.active {
+  font-weight: 600;
+  color: var(--white-light);
+}
+
+.activity-bar-text-list.active::before {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 245%;
+  background: var(--green-main);
+  left: -14px;
+  top: -12px;
+}
+
+.activitySwiper {
+  height: 500px;
+}
+
+.activity-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 240px;
+}
+
+.activity-card-bg {
+  width: 450px;
+  height: 500px;
+  border-radius: 10px;
+  background: rgba(241, 245, 248, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: var(--shadow-box-offset) var(--shadow-box-blur) var(--shadow-color-pc);
+}
+
+.activity-card-img {
+  width: 330px;
+  height: 400px;
+  border-radius: 10px;
+}
+
+.activity-slide1 .activity-card-img {
+  background: url(../image/activity_card_01.jpg) no-repeat center / cover;
+}
+
+.activity-slide2 .activity-card-img {
+  background: url(../image/activity_card_02.jpeg) no-repeat center / cover;
+}
+
+.activity-slide3 .activity-card-img {
+  background: url(../image/activity_card_03.jpeg) no-repeat center / cover;
+}
+
+.activity-slide4 .activity-card-img {
+  background: url(../image/activity_card_04.jpg) no-repeat center / cover;
+}
+
+.activity-slide5 .activity-card-img {
+  background: url(../image/activity_card_05.jpeg) no-repeat center / cover;
+}
+
+.activity-text-wrap {
+  color: var(--white-light);
+  text-align: right;
+}
+
+.activity-card-title {
+  font-size: var(--text-xxl);
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.activity-card-explan {
+  width: 400px;
+  font-size: var(--text-lg);
+  line-height: 150%;
+}
+
+.activity-slide-btn-next,
+.activity-slide-btn-prev {
+  background: rgba(241, 248, 247, 0.5);
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  box-shadow: var(--shadow-btn-offset) var(--shadow-btn-blur) var(--shadow-color-pc);
+}
+
+.activity-slide-btn-next::after {
+  content: '';
+  width: 50px;
+  height: 50px;
+  background: url(../image/icon_activity_slide_btn_down.png) no-repeat center / cover;
+}
+
+.activity-slide-btn-prev::after {
+  content: '';
+  width: 50px;
+  height: 50px;
+  background: url(../image/icon_activity_slide_btn_up.png) no-repeat center / cover;
+}
+
+.activity .activity-slide-btn-next {
+  top: 60%;
+  transform: translateY(-60%);
+}
+
+.activity .activity-slide-btn-prev {
+  top: 40%;
+  transform: translateY(-40%);
+}
+
+@media (max-width: 768px) {
+
+  .activity-slide-btn-next,
+  .activity-slide-btn-prev {
+    display: none;
+  }
+
+  .activity-whole-wrap {
+    gap: 68px;
+  }
+
+  .activitySwiper {
+    flex: 1;
+    height: 550px;
+  }
+
+  .activity-card {
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    margin-top: 1px;
+  }
+
+  .activity-card-bg {
+    width: 100%;
+    height: 240px;
+    box-shadow: var(--m-shadow-box-offset) var(--m-shadow-box-blur) var(--shadow-color-mobile);
+  }
+
+  .activity-card-img {
+    width: 95%;
+    height: 210px;
+  }
+
+  .activity-text-wrap {
+    width: 100%;
+    text-align: left;
+  }
+
+  .activity-card-title {
+    font-size: var(--m-text-lg);
+  }
+
+  .activity-card-explan {
+    font-size: var(--m-text-sm);
+    width: 100%;
+  }
+}

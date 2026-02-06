@@ -1,0 +1,72 @@
+:root {
+  /* 폰트 */
+  --nav: 22px;
+  --nav-weight: 500;
+  --tap1: 28px;
+  --tap1-weight: 600;
+  --tap2: 24px;
+  --btn1: 20px;
+  --btn1-weight: 600;
+  --btn2: 16px;
+  --btn2-weight: 600;
+  --h1: 48px;
+  --h2: 40px;
+  --h3: 32px;
+  --h4: 28px;
+  --h5: 24px;
+  --h6: 18px;
+  --h-weight: 700;
+  --text-sm: 14px;
+  --text-md: 16px;
+  --text-lg: 20px;
+  --text-xl: 24px;
+  --text-xxl: 32px;
+  --text-xxxl: 48px;
+  --text-accent: 64px;
+  --text-accent-weight: 700;
+  /* 모바일 폰트 */
+  --m-h4: 28px;
+  --m-h5: 25px;
+  --m-h-weight: 700;
+  --m-text-xs: 12px;
+  --m-text-sm: 15px;
+  --m-text-md: 18px;
+  --m-text-lg: 20px;
+  --m-text-xl: 24px;
+  --m-text-accent: 40px;
+  --m-text-accent-weight: 700;
+  /* 컬러 */
+  --green-main: #42B049;
+  --green-light: #F1F8F1;
+  --green-dark: #19401C;
+  --green-bg: #E1E6DA;
+  --green-gradient-bg: linear-gradient(to bottom, #42B049 0%, #58B95E 50%, #6EC273 100%);
+  --green-gradient-mbg: linear-gradient(to bottom, #6EC273 0%, #92D196 50%, #ADDCB0 100%);
+  --green-gradient-tap: linear-gradient(to right, #68D471 0%, #22A93B 100%);
+  --yellow-accent: #FFC107;
+  --white-light: #FFFFFF;
+  --white-basic: #F5F5F5;
+  --white-dark: #E9E9E9;
+  --gray-light: #E0E0E0;
+  --gray-basic: #9E9E9E;
+  --gray-dark: #616161;
+  --black-light: #525252;
+  --black-basic: #393939;
+  --black-dark: #212121;
+  /* 그림자 */
+  --shadow-color-pc: rgba(33, 33, 33, 0.25);
+  --shadow-btn-offset: 3px 3px;
+  --shadow-btn-blur: 3px;
+  --shadow-title-offset: 4px 4px;
+  --shadow-title-blur: 2px;
+  --shadow-box-offset: 4px 4px;
+  --shadow-box-blur: 3px;
+  /* 그림자 모바일 */
+  --shadow-color-mobile: rgba(33, 33, 33, 0.15);
+  --m-shadow-btn-offset: 1.5px 1.5px;
+  --m-shadow-btn-blur: 3px;
+  --m-shadow-title-offset: 3px 3px;
+  --m-shadow-title-blur: 1px;
+  --m-shadow-box-offset: 3px 3px;
+  --m-shadow-box-blur: 3px;
+}
