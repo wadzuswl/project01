@@ -11,7 +11,8 @@
 ## 🔗 Link
 - 🔴 리뉴얼 홈페이지: https://wadzuswl.github.io/project01/
 - 📄 기획서: https://www.canva.com/design/DAG5P2k6Of4/3WRwBHZcPZjJI_BvXutRDw/edit
-- 🎨 디자인 시안(Figma): https://www.figma.com/design/lHlGw9nhHLcI8aEf4hx4X5
+- 🎨 디자인 시안 (Figma): https://www.figma.com/design/lHlGw9nhHLcI8aEf4hx4X5
+- 🧩 기능 정의서: https://docs.google.com/presentation/d/1CAGdgdfGFIjGvlVmS13ZdOKiAIRgoLe8ufx2ExLUkWE/edit?usp=sharing
 
 ---
 
